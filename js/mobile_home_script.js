@@ -1,0 +1,1 @@
+let mobile_menu = document.querySelector('#mobile_menu');
