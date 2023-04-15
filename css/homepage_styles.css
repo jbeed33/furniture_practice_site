@@ -127,3 +127,36 @@ header img{
     color: var(--Dark-Gray);
     /* margin-bottom: 10px; */
 }
+
+
+/* ipads, tablets */
+
+@media only screen and (min-width: 530px) and (max-width: 1023px) {
+
+    #scrollable-feature-container, #about-container{
+        width: 100%;
+        text-align: center;
+
+    }
+
+    #scrollable-feature-container{
+        width: 100%;
+    }
+
+    #about-container{
+        width: 100%;
+    }
+
+    .scrollable-feature-content {
+        margin-bottom: 30px;
+    }
+
+    #shop-link {
+        position: relative;
+        left: -6px;
+        margin: 0 auto;
+        width: 45%;
+      }
+
+}
+
