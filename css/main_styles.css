@@ -12,6 +12,7 @@
 
 :root{
     font-size: 16px;
+--Darker-Gray: rgb(117, 114, 114);
 --Dark-Gray: hsl(0, 0%, 63%);
 --Black: hsl(0, 0%, 0%);
 --White: hsl(0, 0%, 100%);
