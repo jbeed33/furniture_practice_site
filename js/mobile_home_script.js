@@ -2,21 +2,29 @@ let mobile_menu = document.querySelector('#mobile_menu');
 let mobile_menu_nav_bar = document.querySelector('#nav-bar-container');
 let mobile_menu_close = document.querySelector('#close_mobile_menu_btn');
 
-const animatedOnScrollElements = document.querySelectorAll('.hidden');
+const animatedOnScrollElements = [];
+animatedOnScrollElements.push(document.querySelector('#about-info-container'))
+animatedOnScrollElements.push(document.querySelector('#scrollable-feature-info-container'))
 
-// const observer = new IntersectionObserver((entries) =>{
-//     entries.forEach((entry) =>{
-//         entry.target.classList.remove('.hidden', entry.isIntersecting);
-//     })
-// },
-// {
-//     threshold: 1
-// } 
-// );
+console.log(animatedOnScrollElements);
 
-// animatedOnScrollElements.forEach(el =>{
-//     observer.observe(el);
-// })
+const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) =>{
+        if(!entry.target.classList.contains('show')){
+            if(entry.isIntersecting) entry.target.classList.add('show');
+          
+        }
+       
+    })
+},
+{
+    threshold: 1
+} 
+);
+
+animatedOnScrollElements.forEach(el =>{
+    observer.observe(el);
+})
 
 mobile_menu.addEventListener('click', () =>{
 
