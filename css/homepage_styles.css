@@ -54,9 +54,7 @@ img{
 }
 
 #nav-bar-container.hidden{
-    opacity: 1;
-    transform: translateY(0%);
-    animation: slide-from-bottom-fade-out 1s forwards;
+    animation: slide-from-bottom-and-fade-out 1s forwards;
 }
 
 
@@ -100,6 +98,11 @@ header img:hover{
 }
 
 #scrollable-feature-info-container, #about-info-container{
+    opacity: 0;
+    padding: 40px 20px;
+}
+
+#scrollable-feature-info-container.show, #about-info-container.show{
     padding: 40px 20px;
     animation: slide-from-bottom-and-fade-in 3s forwards;
 }
