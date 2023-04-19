@@ -12,7 +12,6 @@ const observer = new IntersectionObserver((entries) =>{
     entries.forEach((entry) =>{
         if(!entry.target.classList.contains('show')){
             if(entry.isIntersecting) entry.target.classList.add('show');
-          
         }
        
     })
@@ -31,16 +30,13 @@ mobile_menu.addEventListener('click', () =>{
     // only used in the intial loading state
     if(mobile_menu_nav_bar.classList.contains('initial') ){
         mobile_menu_nav_bar.classList.remove('initial');
+    }
+    else if(mobile_menu_nav_bar.classList.contains('hidden') ){
         mobile_menu_nav_bar.classList.toggle('hidden');
     }
 
-    if(mobile_menu_nav_bar.classList.contains('hidden') ){
-        mobile_menu_nav_bar.classList.toggle('hidden');
-    }
 });
 
 mobile_menu_close.addEventListener('click', () =>{
-    if(!mobile_menu_nav_bar.classList.contains('hidden') ){
         mobile_menu_nav_bar.classList.toggle('hidden');
-    }
 })
