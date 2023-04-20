@@ -11,13 +11,14 @@ console.log(animatedOnScrollElements);
 const observer = new IntersectionObserver((entries) =>{
     entries.forEach((entry) =>{
         if(!entry.target.classList.contains('show')){
+            if(entry.isIntersecting) entry.target.classList.remove('hidden');
             if(entry.isIntersecting) entry.target.classList.add('show');
         }
        
     })
 },
 {
-    threshold: 1
+    threshold: 1 //0.5
 } 
 );
 

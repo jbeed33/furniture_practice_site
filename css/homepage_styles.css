@@ -10,10 +10,17 @@ img{
 }
 
 #overlay{
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.42);
+    background-color: rgba(0, 0, 0, 0.299);
+    z-index: 50;
+   
+}
+
+#overlay.hidden{
+    display: none;
 }
 
 #title-position-controller{
@@ -97,9 +104,8 @@ header img:hover{
     width: 100%;  
 }
 
-#scrollable-feature-info-container, #about-info-container{
+#scrollable-feature-info-container.hidden, #about-info-container.hidden{
     opacity: 0;
-    padding: 40px 20px;
 }
 
 #scrollable-feature-info-container.show, #about-info-container.show{
