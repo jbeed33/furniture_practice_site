@@ -216,6 +216,39 @@ header img:hover{
       }
 
 }
+
+/* Desktop screens */
+@media only screen and (min-width: 1024px) {
+   
+   #site-wrapper{
+    height: 100vh;
+    border: 3px solid blue;
+    overflow: hidden;
+   }
+
+    #scrollable-feature-container, #about-container{
+        display: flex;
+    }
+
+    #scrollable-feature-container > *{
+        height: 60vh;
+        width: 50vw;
+        border: green solid 4px;
+    } 
+
+    #scrollable-feature-container  img {
+        display: inline;
+        object-fit: fill;
+    }
+    
+    #about-container > *{
+        height: 40vh;
+        border: rgb(209, 20, 234) solid 4px;
+    }
+
+
+  
+}
 /* animations / keyframes */
 
 @keyframes slide-from-top-and-fade-in{
